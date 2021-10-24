@@ -15,15 +15,10 @@ public class ReadDataUsingScanner {
 		long d=sc.nextLong();
 		System.out.println("Please Enter Gender");
 		char gen=sc.next().charAt(0);
-		
 		System.out.println("Entered Name is "+str);
-		
 		System.out.println("Entered Age is "+a);
-		
 		System.out.println("Entered Standard is "+s);
-		
 		System.out.println("Entered Mobile No is "+d);
-		
 		System.out.println("Gender is "+gen);
 		
 
