@@ -12,22 +12,17 @@ public class Exception1 {
 		{
 			throw new Toyoung("You are too old");
 		}
-
 	}
-
 }
 class toold extends RuntimeException
 {
 	public toold(String string) {
 		super(string);
 	}
-
-	
 }
 class Toyoung extends RuntimeException
 {
 	public Toyoung(String string) {
 		super(string);
 	}
-
 }

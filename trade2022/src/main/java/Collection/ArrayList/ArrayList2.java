@@ -1,4 +1,4 @@
-package Collection;
+package Collection.ArrayList;
 import java.util.*;
 public class ArrayList2 {
 // demonstrate get and set method in Arraylist
