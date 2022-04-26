@@ -1,5 +1,6 @@
 package java8Features.streamApi;
 
+import java.awt.CardLayout;
 import java.util.Optional;
 
 import java8Features.streamApi.model.Insurance;
@@ -19,10 +20,43 @@ public class NullPoinerInInsuranceCarPersonModelClass {
 		// In that case we have to check for null values
 
 		Insurance insureance = new Insurance("Icic Banks");
-		car c = new car(null);// car doesent have an insurance
+		/*car c = new car(null);// car doesent have an insurance
 		Person p = new Person(null);// person dosent owns a car
 		System.out.println(checkforNulls(p));
-
+*/
+		
+		//Using optional 
+		Optional<Insurance> optionalInsurance=Optional.ofNullable(insureance);
+		if(optionalInsurance.isPresent())
+		{
+			System.out.println(optionalInsurance.get().getInsuranceCompanyName());
+		}
+		//using collection 
+		optionalInsurance.map((i)->i.getInsuranceCompanyName()).ifPresent(name->System.out.println(name.get()));
+		
+		
+		
+		
+		car c = new car(insureance);
+		Person p = new Person(c);
+		Optional<car> cc=Optional.ofNullable(p.getCar());
+		
+		String s=cc.flatMap(ccc->ccc.getinsurance()).map(i->i.getInsuranceCompanyName()).toString();
+		System.out.println(s);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	private static Optional<String> checkforNulls(Person p) {
