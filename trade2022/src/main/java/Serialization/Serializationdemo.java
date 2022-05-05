@@ -18,7 +18,7 @@ public class Serializationdemo {
 	InputStream f2=new FileInputStream("test.txt");
 	ObjectInputStream os = new ObjectInputStream(f2);
 	Student s2=(Student) os.readObject();
-	System.out.println(s2);
+	System.out.println(s2.name);
 	
 	
 	
