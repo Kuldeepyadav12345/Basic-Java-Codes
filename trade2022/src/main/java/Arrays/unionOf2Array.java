@@ -9,7 +9,7 @@ public static void main(String[] args) {
 	Arrays.sort(arr1);
 	Arrays.sort(arr2);
 	System.out.println("1st Sorted Array"+Arrays.toString(arr1));
-	System.out.println("2nd Sorted Array"+Arrays.toString(arr2));
+	System.out.println("2nd Sorted Array"+Arrays.toString(arr2));;;;;
 	int m=arr1.length;
 	int n=arr2.length;
 	printUnion(arr1,arr2,m,n);
